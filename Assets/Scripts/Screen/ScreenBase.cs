@@ -16,13 +16,26 @@ namespace Screens {
     public class ScreenBase : MonoBehaviour
     {
         //input/process/output
-        //abrir a tela / descobrir a tela que está / mostra os obj dessa tela
+        //abrir a tela / descobrir a tela que estï¿½ / mostra os obj dessa tela
 
         public ScreenType screenType;
 
         public List<Transform> listOfObjects;
 
         public bool startHidden = false;
+
+        [Header("Animation")]
+        public float delayBtObjects = .5f;
+        public float animDuration = .3f;
+
+
+        private void Start()
+        {
+            if(startHidden)
+            {
+                HideObjects();
+            }
+        }
 
         [Button]
         protected virtual void Show()
@@ -44,6 +57,17 @@ namespace Screens {
         }
 
         private void ShowObjects()
+        {
+            for (int i = 0; i < listOfObjects.Count; i++)
+            {
+                var obj = listOfObjects[i];
+
+                obj.gameObject.SetActive(true);
+                obj.DOScale(0, animDuration).From().SetDelay(i * delayBtObjects);
+            }
+        }
+
+        private void FirstShowObjects()
         {
             listOfObjects.ForEach(i => i.gameObject.SetActive(true));
         }

@@ -368,6 +368,8 @@ MonoBehaviour:
   - {fileID: 1347709713}
   - {fileID: 932062252}
   startHidden: 0
+  delayBtObjects: 0.05
+  animDuration: 0.3
 --- !u!1 &398617485
 GameObject:
   m_ObjectHideFlags: 0

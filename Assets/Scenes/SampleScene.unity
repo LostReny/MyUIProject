@@ -257,6 +257,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myVector: {x: 0, y: 0, z: 0}
+  finalScale: 1.2
+  scaleDuration: 0.2
 --- !u!1 &199279983
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,6 +679,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myVector: {x: 0, y: 0, z: 0}
+  finalScale: 1.2
+  scaleDuration: 0.2
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,6 +898,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myVector: {x: 0, y: 0, z: 0}
+  finalScale: 1.2
+  scaleDuration: 0.2
 --- !u!1 &1303967483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,6 +1109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myVector: {x: 0, y: 0, z: 0}
+  finalScale: 1.2
+  scaleDuration: 0.2
 --- !u!1 &1557898192
 GameObject:
   m_ObjectHideFlags: 0

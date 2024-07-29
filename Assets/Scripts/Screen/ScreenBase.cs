@@ -22,6 +22,8 @@ namespace Screens {
 
         public List<Transform> listOfObjects;
 
+        public List<Typer> listOfPhrases;
+
         public bool startHidden = false;
 
         [Header("Animation")]
@@ -64,6 +66,16 @@ namespace Screens {
 
                 obj.gameObject.SetActive(true);
                 obj.DOScale(0, animDuration).From().SetDelay(i * delayBtObjects);
+            }
+
+            Invoke(nameof(StartType), delayBtObjects * listOfObjects.Count);
+        }
+
+        private void StartType()
+        {
+            for (int i = 0; i < listOfPhrases.Count; i++)
+            {
+                listOfPhrases[i].StartType();
             }
         }
 

@@ -2,7 +2,7 @@ using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using NaughtyAttributes;
+using UnityEngine.UI;
 using DG.Tweening;
 
 namespace Screens {
@@ -31,6 +31,9 @@ namespace Screens {
         public float animDuration = .3f;
 
 
+        public Canvas canvas;
+
+
         private void Start()
         {
             if(startHidden)
@@ -40,14 +43,14 @@ namespace Screens {
         }
 
         [Button]
-        protected virtual void Show()
+        public virtual void Show()
         {
             ShowObjects();
             Debug.Log("Show");
         }
 
         [Button]
-        protected virtual void Hide()
+        public virtual void Hide()
         {
             HideObjects();
             Debug.Log("Hide");
@@ -56,6 +59,7 @@ namespace Screens {
         private void HideObjects()
         {
             listOfObjects.ForEach(i => i.gameObject.SetActive(false));
+            canvas.enabled = false; 
         }
 
         private void ShowObjects()
@@ -69,6 +73,7 @@ namespace Screens {
             }
 
             Invoke(nameof(StartType), delayBtObjects * listOfObjects.Count);
+            canvas.enabled = true; 
         }
 
         private void StartType()
@@ -82,6 +87,7 @@ namespace Screens {
         private void FirstShowObjects()
         {
             listOfObjects.ForEach(i => i.gameObject.SetActive(true));
+            canvas.enabled = true; 
         }
     }
 

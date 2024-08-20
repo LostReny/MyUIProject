@@ -49,7 +49,7 @@ public class ShooterEditor : Editor
         GUI.color = Color.yellow;
         if (GUILayout.Button("CreateAmmo"))
         {
-            myTarget.CreateAmmo();
+            myTarget.CreateRandomAmmo();
         }
 
         GUI.color = Color.white;

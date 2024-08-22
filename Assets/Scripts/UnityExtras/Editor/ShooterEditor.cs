@@ -14,6 +14,7 @@ public class ShooterEditor : Editor
         Shooter myTarget = (Shooter)target;
         myTarget.ammoPrefab = (GameObject) EditorGUILayout.ObjectField(myTarget.ammoPrefab, typeof(GameObject), true);
 
+        myTarget.weaponPrefab = (GameObject) EditorGUILayout.ObjectField(myTarget.weaponPrefab, typeof(GameObject), true);
 
         EditorGUILayout.LabelField("Ammo List", EditorStyles.boldLabel);
 
@@ -40,8 +41,8 @@ public class ShooterEditor : Editor
             }
         }
 
-        myTarget.speed = EditorGUILayout.IntField("Velocidade munição", myTarget.speed);
-        myTarget.ammo = EditorGUILayout.IntField("Munição", myTarget.ammo);
+        myTarget.speed = EditorGUILayout.IntField("Velocidade muniï¿½ï¿½o", myTarget.speed);
+        myTarget.ammo = EditorGUILayout.IntField("Muniï¿½ï¿½o", myTarget.ammo);
 
         EditorGUILayout.LabelField("Velocidade tiro", myTarget.ShootVelocity.ToString());
 

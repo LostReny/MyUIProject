@@ -6,6 +6,8 @@ public class Shooter : MonoBehaviour
     public GameObject ammoPrefab;
     public List<GameObject> ammoList;
 
+    public GameObject weaponPrefab;
+
     public int speed = 2;
     public int ammo = 10;
 

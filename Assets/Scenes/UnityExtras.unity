@@ -170,6 +170,7 @@ MonoBehaviour:
   ammoList:
   - {fileID: 9154718990405677198, guid: a61dd5233760d1e4d9f9753424afc22e, type: 3}
   - {fileID: 6743772623326414768, guid: 1c76bbbd898d88547ad306a579a21026, type: 3}
+  weaponPrefab: {fileID: 263397724534674213, guid: 699f436a1c1eda54ea8109c9fcf7a936, type: 3}
   speed: 5
   ammo: 12
 --- !u!1 &644203606
